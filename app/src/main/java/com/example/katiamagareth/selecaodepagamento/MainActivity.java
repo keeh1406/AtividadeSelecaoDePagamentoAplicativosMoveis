@@ -33,23 +33,41 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void click(View v) {
+        Double valorCompra = Double.parseDouble(valor.getText().toString());
+        Double parcela = null;
+        Double valorTotal = null;
+        Double parcela2 = null;
+        Double valorTotal2 = null;
+        Double parcela3 = null;
+        Double valorTotal3 = null;
+        String conversor;
 
-
-
-
-        switch (opcao) {
-            case "Á Vista":
-                valorfinal = valor / 10;
-
+        RadioGroup radioFormas = (RadioGroup) findViewById(R.id.radioFormas);
+        switch (radioGroup.getCheckedRadioButtonId())
+        {
+            case R.id.radioAVista:
+                valorCompra = valorCompra - valorCompra * 0.1;
+                conversor = String.valueOf(valor);
+                valorTotal.setText(conversor);
                 break;
-            case "Cartão de Crédito":
-
+            case R.id.radioCartaoDebito:
+                conversor = String.valueOf(valor);
+                valorTotal.setText(conversor);
                 break;
-            case "Cartão de Débito":
-
-
+            case R.id.radioCartaoCredito:
+                valorCompra = valorCompra + valorCompra * 0.05;
+                conversor = String.valueOf(valorCompra);
+                valorTotal.setText("1 X ");
+                parcela.setText(conversor);
+                valorTotal2.setText("2 X ");
+                double valorCompra2 = valorCompra / 2;
+                conversor = String.valueOf(valorCompra2);
+                parcela2.setText(conversor);
+                valorTotal3.setText("3 X ");
+                double valorCompra3 = valorCompra / 3;
+                conversor = String.valueOf(valorCompra3);
+                parcela3.setText(conversor);
                 break;
-
         }
 
     }
