@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SelecaoDePagamento.iml" filepath="$PROJECT_DIR$/SelecaoDePagamento.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AtividadeSelecaoDePagamentoAplicativosMoveis.iml" filepath="$PROJECT_DIR$/AtividadeSelecaoDePagamentoAplicativosMoveis.iml" />
+      <module fileurl="file://C:\Users\opet\Desktop\AtividadeSelecaoDePagamentoAplicativosMoveis\SelecaoDePagamento.iml" filepath="C:\Users\opet\Desktop\AtividadeSelecaoDePagamentoAplicativosMoveis\SelecaoDePagamento.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\opet\Desktop\AtividadeSelecaoDePagamentoAplicativosMoveis\app\app.iml" filepath="C:\Users\opet\Desktop\AtividadeSelecaoDePagamentoAplicativosMoveis\app\app.iml" />
     </modules>
   </component>
 </project>

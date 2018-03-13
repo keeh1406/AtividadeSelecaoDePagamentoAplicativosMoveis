@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">SelecaoDePagamento</string>
+    <string-array name="pagamento">
+    <item>Á Vista</item>
+    <item>Cartão de Crédito</item>
+    <item>Cartão de Débito</item>
+    </string-array>
 </resources>

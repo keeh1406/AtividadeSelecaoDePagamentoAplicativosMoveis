@@ -6,23 +6,51 @@ package com.example.katiamagareth.selecaodepagamento;
 // 3 - Cartão de crédito: 5% de acréscimo e exibir o valor em até 3 parcelas
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText editValor;
-    RadioGroup radioForma;
+    private EditText valor;
+    private RadioGroup formas;
+    private RadioButton vista;
+    private RadioButton credito;
+    private RadioButton debito;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        editValor = findViewById(R.id.editValor);
-        radioForma = findViewById(R.id.radioForma);
+        valor = findViewById(R.id.editValor);
+        formas = findViewById(R.id.radioFormas);
+        vista = findViewById(R.id.radioAVista);
+        credito = findViewById(R.id.radioCartaoCredito);
+        debito = findViewById(R.id.radioCartaoDebito);
+
     }
 
-    int selecionado = radioForma.getCheckedRadioButtonId();
-    RadioButton radioButton = findViewById(selecionado);
-    data+= "\n"+ radioButton.getText().toString();
-    }
+    public void click(View v) {
 
+
+
+
+        switch (opcao) {
+            case "Á Vista":
+                valorfinal = valor / 10;
+
+                break;
+            case "Cartão de Crédito":
+
+                break;
+            case "Cartão de Débito":
+
+
+                break;
+
+        }
+
+    }
+}
