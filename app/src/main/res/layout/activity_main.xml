@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,68 +7,47 @@
     android:orientation="vertical"
     tools:context="com.example.katiamagareth.selecaodepagamento.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Formas de Pagamento!"
-        android:textSize="30sp"
-        tools:layout_editor_absoluteX="36dp"
-        tools:layout_editor_absoluteY="79dp" />
-
     <EditText
         android:id="@+id/editValor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Qual o valor da compra?"
-        android:inputType="numberDecimal"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="131dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:text="Como deseja pagar?!"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="186dp" />
-
-    <RadioGroup
-        android:id="@+id/radioFormas"
+        android:hint="Digite o total da despesa"
+        android:inputType="numberDecimal"
         android:layout_width="match_parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="226dp">
+        android:layout_height="wrap_content" />
+    <RadioGroup
+        android:id="@+id/grupoPagamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
 
         <RadioButton
-            android:id="@+id/radioAVista"
+            android:id="@+id/rbVista"
+            android:text="À vista"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Á vista" />
-
+            android:layout_height="wrap_content" />
         <RadioButton
-            android:id="@+id/radioCartaoDebito"
+            android:id="@+id/rbDebito"
+            android:text="Débito"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Cartão de Débito" />
-
+            android:layout_height="wrap_content" />
         <RadioButton
-            android:id="@+id/radioCartaoCredito"
+            android:id="@+id/rbCredito"
+            android:text="Crédito"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Cartão de Crédito" />
+            android:layout_height="wrap_content" />
+
     </RadioGroup>
 
     <Button
-        android:id="@+id/buttonEnviar"
+        android:onClick="calcular"
         android:layout_width="match_parent"
-        android:layout_height="52dp"
-        android:onClick="click"
-        android:text="Enviar"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="347dp" />
+        android:layout_height="wrap_content"
+        android:text="Calcular"/>
+
+    <TextView
+        android:id="@+id/textResultado"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
